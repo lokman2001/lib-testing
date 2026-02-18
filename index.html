@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/scrolltabs.css" />
+    <link rel="stylesheet" href="./css/flatpickr.css" />
+    <!-- <link rel="stylesheet" href="./css/fullcalendar.css" /> -->
+    <link rel="stylesheet" href="./css/fullcalendar.min.css" />
+    <link rel="stylesheet" href="./asset/Icon/fontawesome-free-5.15.4-web/css/all.css">
+    <link rel="stylesheet" href="./css/richtext.min.css">
+    <link rel="stylesheet" href="./css/multiPick.css" />
+    <link rel="stylesheet" href="./css/selectivity-jquery.css">
+    <link rel="stylesheet" href="./css/daterangepicker.css">
+    <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+    <main>
+        <div id="tabs2" class="scroll_tabs_theme_light">
+            <span class="tab tab_selected">Rich Text Editer
+            </span>
+            <span class="tab"> Date Range Picker </span>
+            <span class="tab"> Multi Select </span>
+            <span class="tab"> Custom Alert </span>
+            <span class="tab"> Tree Folder </span>
+            <span class="tab"> Pie Chart Bar Chart</span>
+            <span class="tab"> Calender </span>
+            <span class="tab"> Confetti Animated Button</span>
+            <span class="tab"> Tab 8</span>
+            <span class="tab"> Tab 9</span>
+            <span class="tab"> Tab 10</span>
+            <span class="tab"> Tab 11</span>
+            <span class="tab"> Tab 12</span>
+        </div>
+        </div>
+        <div id="content" class="tab-content-container">
+            <div class="tab-content" id="tab1">
+                <h2>Rich Text Editor</h2>
+                <div id="editor">
+                    <h2>Demo Content</h2>
+                    <p>Preset build with <code>snow</code> theme, and some common formats.</p>
+                </div>
+            </div>
+            <div class="tab-content" id="tab1">
+                <h2>Date Range Picker</h2>
+                <div>
+                    <h4>flatpickr Date picker</h4>
+                    <div class="dateRangePicker">
+                        <div>
+                            <input type="text" id="startDate" placeholder="start date">
+                            <i class="fi fi-rr-arrow-small-right"></i>
+                            <input type="text" id="endDate" placeholder="end date">
+                        </div>
+                    </div>
+                    <div class="dateRangePicker-2">
+                        <input type="text" id="dateRange" placeholder="Select Date">
+                        <i class="fi fi-rr-calendar-day"></i>
+                    </div>
+                    <h4>Date Range Picker</h4>
+                    <div class="dateRangePicker-2">
+                        <input type="text" id="dateRangePicker" name="dateRangePicker-icon">
+                        <label for="dateRangePicker"><i class="fi fi-rr-calendar-day"></i></label>
+                    </div>
+
+
+                </div>
+
+            </div>
+            <div class="tab-content" id="tab2">
+                <h2>Multi Select</h2>
+                <h4>multiPick</h4>
+                <div class="">
+                    <select id="multiPick" class="multiPick">
+                        <option value="0">Option 0</option>
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
+                        <option value="4">Option 4</option>
+                    </select>
+                </div>
+                <h4>Selectivity</h4>
+                <span id="select"></span>
+            </div>
+
+
+            <div class="tab-content" id="tab3">
+                <h2>Custom Alert</h2>
+                <div class="alerts">
+                    <h4>Alerts</h4>
+                    <button class="btn btn-secondary call-alert" data-type="success" data-message="this is testing">Show
+                        Success Alert</button>
+                    <button class="btn btn-secondary call-alert" data-type="error" data-message="this is testing">Show
+                        Error Alert</button>
+                    <button class="btn btn-secondary call-alert" data-type="warning" data-message="this is testing">Show
+                        Warning Alert</button>
+                    <button class="btn btn-secondary call-alert" data-type="info" data-message="this is testing">Show
+                        Info Alert</button>
+                    <div class="success-alert alert">
+                        <div>
+                            <i class="fi fi-rr-star"></i>
+                            <span class="message">
+                            </span>
+                        </div>
+                        <button class="close">
+                            <i class="fi fi-rr-cross"></i>
+                        </button>
+                    </div>
+
+                    <div class="error-alert alert">
+                        <div>
+                            <i class="fi fi-rr-minus-circle"></i>
+                            <span class="message">
+                                This is an error alert message.
+                            </span>
+                        </div>
+                        <button class="close">
+                            <i class="fi fi-rr-cross"></i>
+                        </button>
+                    </div>
+                    <div class="warning-alert alert">
+                        <div>
+                            <i class="fi fi-rr-triangle-warning"></i>
+                            <span>This is a warning alert message.</span>
+                        </div>
+                        <button class="close">
+                            <i class="fi fi-rr-cross"></i>
+                        </button>
+                    </div>
+                    <div class="info-alert alert">
+                        <div>
+                            <i class="fi fi-rr-info"></i>
+                            <span>This is an info alert message.</span>
+                        </div>
+                        <button class="close">
+                            <i class="fi fi-rr-cross"></i>
+                        </button>
+                    </div>
+                </div>
+                <div>
+                    <h4>Modal Box</h4>
+                    <button class="btn btn-primary"
+                        onclick="callModel('Confirmation','Are you sure you want to do this?')">Show Modal</button>
+                    <div class="modal-box">
+                        <div class="header">
+                            <h4 class="modal-header">Modal Header</h4>
+                            <button class="close-modal close">
+                                <i class="fi fi-rr-cross"></i>
+                            </button>
+                        </div>
+                        <div class="body">
+                            <p class="message">
+                                this is message box body
+                            </p>
+                        </div>
+                        <div class="footer">
+                            <button class="btn btn-secondary close-modal">No</button>
+                            <button class="btn btn-primary close-modal">Yes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="tab-content" id="tab4">
+                <h4>Folder Tree</h4>
+                <ul class="tree-root">
+                    <li class="folder first-child">
+                        <span>Personal</span>
+                        <ul class="child">
+                            <li class="folder close"><span><label for="">Japan Trip</label></span>
+                                <ul class="child close">
+                                    <li class="file pdf"><span>Passport_Scan.pdf</span></li>
+                                    <li class="file doc"><span>To-Do_List.docx</span></li>
+                                    <li class="file sheet"><span>Budget_2026.xlsx</span></li>
+                                </ul>
+                            </li>
+                            <li class="folder close"><span>Flight Tickets</span>
+                                <ul class="child close">
+                                    <li class="file pdf"><span>Booking_Confirmation_QR742.pdf</span></li>
+                                    <li class="file doc"><span>Check-in_Instructions.doc</span></li>
+                                    <li class="file sheet"><span>Flight_Price_Comparison.xlsx</span></li>
+                                </ul>
+                            </li>
+                            <li class="folder close"><span>Itineraries</span>
+                                <ul class="child close">
+                                    <li class="file pdf"><span>Tokyo_Day_By_Day.pdf</span></li>
+                                    <li class="file doc"><span>Restaurant_Reservations.doc</span></li>
+                                    <li class="file sheet"><span>Time_Zone_Planner.xlsx</span></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="folder first-child">
+                        <span>Business</span>
+                        <ul class="child">
+                            <li class="folder close"><span>Financial Reports</span>
+                                <ul class="child close">
+                                    <li class="file pdf"><span>Quarterly_Report_Q4.pdf</span></li>
+                                    <li class="file doc"><span>Meeting_Minutes_Jan.docx</span></li>
+                                    <li class="file sheet"><span>Budget_2026.xlsx</span></li>
+                                </ul>
+                            </li>
+                            <li class="folder close"><span>Human Resources</span>
+                                <ul class="child close">
+                                    <li class="file pdf"><span>Company_Policy.pdf</span></li>
+                                    <li class="file doc"><span>Project_Proposal.doc</span></li>
+                                    <li class="file sheet"><span>Employee_Directory.csv</span></li>
+                                </ul>
+                            </li>
+                            <li class="folder close"><span>Marketing Assets</span>
+                                <ul class="child close">
+                                    <li class="file pdf"><span>NDA_Template.pdf</span></li>
+                                    <li class="file doc"><span>Brand Job_Description.docx</span></li>
+                                    <li class="file sheet"><span>Sales_Projections.xlsx</span></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </div>
+
+
+            <div class="tab-content" id="tab5">
+                <h2>Pie Chart Bar Chart</h2>
+
+                <div class="charts">
+                    <div>
+                        <h4>Bar Chart</h4>
+                        <div>
+                            <canvas id="bar" style="width: 200px; height: 200px;"></canvas>
+                        </div>
+                    </div>
+                    <div>
+                        <h4>Pie Chart</h4>
+                        <div>
+                            <canvas id="pie" style="width: 100%; height: 200px;"></canvas>
+                        </div>
+                    </div>
+                    <div>
+                        <h4>Doughnut Chart</h4>
+                        <div>
+                            <canvas id="doughnut" style="width: 100%; height: 200px;"></canvas>
+                        </div>
+                    </div>
+                    <div>
+                        <h4>Line Chart</h4>
+                        <div>
+                            <canvas id="line" style="width: 100%; height: 200px;"></canvas>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="tab-content" id="tab6">
+                <div id="container"></div>
+            </div>
+
+            <div class="tab-content" id="tab7">
+                <h2>Confetti Animated Button</h2>
+                <di class="tab7-content-container">
+                    <button class="confetti"><i class="fi fi-rr-party-horn"></i> <span>Click to
+                            Celebrate</span></button>
+            </div>
+        </div>
+
+        </div>
+    </main>
+
+    <div class="alert-display-area">
+
+    </div>
+
+    <div class="overlay">
+
+    </div>
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@flaticon/flaticon-uicons@3.3.1/css/all/all.min.css">
+    <script src="./asset/Icon/fontawesome-free-5.15.4-web/js/all.js"></script>
+    <script src="./js/lib/jquery.js"></script>
+    <script src="./js/lib/jquery.richtext.min.js"></script>
+    <script src="./js/lib/multiPick.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="./js/lib/flatpickr.plugin.js"></script>
+    <script src="./js/lib/jquery.mousewheel.js"></script>
+    <script src="./js/lib/jquery.scrolltabs.js"></script>
+    <script src="./js/lib/chart.js"></script>
+    <script src="./js/lib/moment.js"></script>
+    <script src="./js/lib/fullcalendar.js"></script>
+    <script src="./js/lib/party.js"></script>
+    <script src="./js/lib/selectivity-jquery.js"></script>
+    <script src="./js/lib/daterangepicker.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
