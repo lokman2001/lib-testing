@@ -23,7 +23,6 @@
 
 .btn.default {
   background: white;
-  border: var(-);
 }
 
 .btn.default:hover {
@@ -70,21 +69,25 @@
 }
 
 .scroll_tabs_theme_light div.scroll_tab_inner span.tab_selected {
+  color: var(--text-white);
+  background: var(--primary-color);
+  border-radius: 5px;
+}
+
+.scroll_tabs_theme_light div.scroll_tab_inner span.scroll_tab_over {
   color: var(--text-black);
-  background: transparent;
-  border-bottom: 3px solid var(--primary-color);
+  background: var(--secondary-color);
+  border-radius: 5px;
 }
 
 .scroll_tabs_theme_light .scroll_tab_left_button {
   background: transparent;
-  position: relative !important;
+  position:  relative !important;
   border: none;
-  height: 100%;
 }
 
 .scroll_tabs_theme_light div.scroll_tab_inner span.scroll_tab_left_finisher {
   background: transparent;
-  position: relative !important;
   border: none;
 }
 
@@ -95,9 +98,8 @@
 } */
 
 .scroll_tabs_theme_light .scroll_tab_right_button {
-  position: relative !important;
+  position:  relative !important;
   background: transparent;
-  height: 100%;
   border: none;
 }
 
@@ -110,13 +112,16 @@
     background: rgba(0, 0, 0, 0.075);
     border: none;
 } */
-
+.tab{
+  font-size: medium !important;
+}
 .scroll_tabs_container {
+  background: rgba(255, 255, 255, 0.445);
+  box-shadow: 0px 0px 5px 2px rgba(128, 128, 128, 0.158);
   margin-top: 10px;
   display: flex;
   padding: 8px;
   border-radius: 10px;
-  border: var(--border-width) solid var(--secondary-color);
 }
 
 .scroll_tabs_theme_light div.scroll_tab_inner {
@@ -132,6 +137,27 @@
 
 .tab-content-container {
   margin-top: 20px;
+}
+.scroll_tabs_theme_light .scroll_tab_left_button{
+  line-height: normal !important;
+  height: fit-content;
+}
+.scroll_tabs_theme_light .scroll_tab_right_button{
+  line-height: normal !important;
+}
+.scroll_tabs_theme_light .scroll_tab_left_button::before{
+  font-size: 30px;
+  vertical-align: top;
+  padding: 0 5px !important;
+}
+.scroll_tabs_theme_light .scroll_tab_right_button::before{
+  align-self: center;
+  display: block;
+  font-size: 30px;
+  padding: 0 5px !important;
+}
+.scroll_arrow_disabled .scroll_tab_right_button_disabled::before{
+  color: grey !important;
 }
 
 main {
@@ -153,6 +179,9 @@ body {
   border: none;
 }
 
+.ql-toolbar{
+  background: whitesmoke;
+}
 .richText-toolbar {
   margin: 10px 0;
   padding: 5px;
@@ -452,32 +481,38 @@ span.flatpickr-day.selected.endRange {
 
 /* Folder Tree */
 .folder-view{
-
-  display: flex;
   height: calc( 100vh - 162px);
+  border: 1px solid var(--secondary-color);
+  overflow: hidden;
+  border-radius: 10px;
+  display: flex;
 }
 .file-view{
+  display: inline;
   z-index: 20;
-  width: 100%;
-  max-width: 100%;
+  flex: 1;
   height: 100%;
 }
 .ui-resizable-e{
 cursor: e-resize;
+width: 20px;
 z-index: 100 !important;
-background: gray;
-width: 100px !important;
-
 }
+.ui-resizable-s{
+  display: none !important;
+}
+.ui-resizable-se{
+  display: none !important;
+}
+
 .tree-folder{
-  resize: horizontal;
-  z-index: 50;
-  display: flex;
-  width: 30%;
-  min-width: 50px;
-  height: 100%;
-  position: relative;
-  margin-right: 20px;
+width: 200px;
+min-width: 100px;
+max-width: 40%;
+height: 100%;
+border-right: 1px solid var(--secondary-color) ;
+margin-right: 10px;
+overflow: hidden;
 }
 
 .divider{
@@ -490,10 +525,11 @@ width: 100px !important;
 }
 .tree-root{
   width: 100%;
-  overflow-x: auto;
   height: 100%;
+  overflow-x:auto;
   margin: 0;
-  padding-top: 30px;
+  padding-left: 0px !important;
+  padding-right: 10px;
 }
 
 .tree-root li {
@@ -502,7 +538,7 @@ width: 100px !important;
 
 .tree-root ul,
 li {
-  margin: 0 !important;
+  margin: 5px !important;
   white-space: nowrap;
   list-style: none;
 }
