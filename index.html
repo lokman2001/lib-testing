@@ -7,6 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="./css/scrolltabs.css" />
     <link rel="stylesheet" href="./css/flatpickr.css" />
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.2/themes/base/jquery-ui.css">
     <!-- <link rel="stylesheet" href="./css/fullcalendar.css" /> -->
     <link rel="stylesheet" href="./css/fullcalendar.min.css" />
     <link rel="stylesheet" href="./asset/Icon/fontawesome-free-5.15.4-web/css/all.css">
@@ -164,63 +165,78 @@
             </div>
 
 
-            <div class="tab-content" id="tab4">
+            <div class="tab-content " id="tab4">
                 <h4>Folder Tree</h4>
-                <ul class="tree-root">
-                    <li class="folder first-child">
-                        <span>Personal</span>
-                        <ul class="child">
-                            <li class="folder close"><span><label for="">Japan Trip</label></span>
-                                <ul class="child close">
-                                    <li class="file pdf"><span>Passport_Scan.pdf</span></li>
-                                    <li class="file doc"><span>To-Do_List.docx</span></li>
-                                    <li class="file sheet"><span>Budget_2026.xlsx</span></li>
-                                </ul>
-                            </li>
-                            <li class="folder close"><span>Flight Tickets</span>
-                                <ul class="child close">
-                                    <li class="file pdf"><span>Booking_Confirmation_QR742.pdf</span></li>
-                                    <li class="file doc"><span>Check-in_Instructions.doc</span></li>
-                                    <li class="file sheet"><span>Flight_Price_Comparison.xlsx</span></li>
-                                </ul>
-                            </li>
-                            <li class="folder close"><span>Itineraries</span>
-                                <ul class="child close">
-                                    <li class="file pdf"><span>Tokyo_Day_By_Day.pdf</span></li>
-                                    <li class="file doc"><span>Restaurant_Reservations.doc</span></li>
-                                    <li class="file sheet"><span>Time_Zone_Planner.xlsx</span></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="folder first-child">
-                        <span>Business</span>
-                        <ul class="child">
-                            <li class="folder close"><span>Financial Reports</span>
-                                <ul class="child close">
-                                    <li class="file pdf"><span>Quarterly_Report_Q4.pdf</span></li>
-                                    <li class="file doc"><span>Meeting_Minutes_Jan.docx</span></li>
-                                    <li class="file sheet"><span>Budget_2026.xlsx</span></li>
-                                </ul>
-                            </li>
-                            <li class="folder close"><span>Human Resources</span>
-                                <ul class="child close">
-                                    <li class="file pdf"><span>Company_Policy.pdf</span></li>
-                                    <li class="file doc"><span>Project_Proposal.doc</span></li>
-                                    <li class="file sheet"><span>Employee_Directory.csv</span></li>
-                                </ul>
-                            </li>
-                            <li class="folder close"><span>Marketing Assets</span>
-                                <ul class="child close">
-                                    <li class="file pdf"><span>NDA_Template.pdf</span></li>
-                                    <li class="file doc"><span>Brand Job_Description.docx</span></li>
-                                    <li class="file sheet"><span>Sales_Projections.xlsx</span></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
+                <div class="folder-view">
+                    <div class="tree-folder">
+                        <ul class="tree-root">
 
-                </ul>
+                            <li class="folder first-child">
+                                <span>Personal</span>
+                                <ul class="child">
+                                    <li class="folder close"><span><label for="">Japan Trip</label></span>
+                                        <ul class="child close">
+                                            <li class="file pdf"><span>Passport_Scan.pdf</span></li>
+                                            <li class="file doc"><span>To-Do_List.docx</span></li>
+                                            <li class="file sheet"><span>Budget_2026.xlsx</span></li>
+                                        </ul>
+                                    </li>
+                                    <li class="folder close"><span>Flight Tickets</span>
+                                        <ul class="child close">
+                                            <li class="file pdf"><span>Booking_Confirmation_QR742.pdf</span></li>
+                                            <li class="file doc"><span>Check-in_Instructions.doc</span></li>
+                                            <li class="file sheet"><span>Flight_Price_Comparison.xlsx</span></li>
+                                        </ul>
+                                    </li>
+                                    <li class="folder close"><span>Itineraries</span>
+                                        <ul class="child close">
+                                            <li class="file pdf"><span>Tokyo_Day_By_Day.pdf</span></li>
+                                            <li class="file doc"><span>Restaurant_Reservations.doc</span></li>
+                                            <li class="file sheet"><span>Time_Zone_Planner.xlsx</span></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="folder first-child">
+                                <span>Business</span>
+                                <ul class="child">
+                                    <li class="folder close"><span>Financial Reports</span>
+                                        <ul class="child close">
+                                            <li class="file pdf"><span>Quarterly_Report_Q4.pdf</span></li>
+                                            <li class="file doc"><span>Meeting_Minutes_Jan.docx</span></li>
+                                            <li class="file sheet"><span>Budget_2026.xlsx</span></li>
+                                        </ul>
+                                    </li>
+                                    <li class="folder close"><span>Human Resources</span>
+                                        <ul class="child close">
+                                            <li class="file pdf"><span>Company_Policy.pdf</span></li>
+                                            <li class="file doc"><span>Project_Proposal.doc</span></li>
+                                            <li class="file sheet"><span>Employee_Directory.csv</span></li>
+                                        </ul>
+                                    </li>
+                                    <li class="folder close"><span>Marketing Assets</span>
+                                        <ul class="child close">
+                                            <li class="file pdf"><span>NDA_Template.pdf</span></li>
+                                            <li class="file doc"><span>Brand Job_Description.docx</span></li>
+                                            <li class="file sheet"><span>Sales_Projections.xlsx</span></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+
+                        </ul>
+                        <div class="ui-resizable-e">
+                            <i class="fa-solid fa-grip"></i>
+                        </div>
+                    </div>
+                    <div class="file-view">
+                            <iframe  src="./asset/fs023-sample-financial-statements.pdf" frameborder="0" width="100%"
+                            height="100%"></iframe>
+                    </div>
+                        
+                </div>
+
+
             </div>
 
 
@@ -284,6 +300,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@flaticon/flaticon-uicons@3.3.1/css/all/all.min.css">
     <script src="./asset/Icon/fontawesome-free-5.15.4-web/js/all.js"></script>
     <script src="./js/lib/jquery.js"></script>
+    <script src="./js/lib/JqueryUI.js"></script>
     <script src="./js/lib/jquery.richtext.min.js"></script>
     <script src="./js/lib/multiPick.min.js"></script>
     <script src="./js/lib/flatpickr.js"></script>

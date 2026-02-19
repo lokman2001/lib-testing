@@ -451,20 +451,75 @@ span.flatpickr-day.selected.endRange {
 }
 
 /* Folder Tree */
+.folder-view{
+
+  display: flex;
+  height: calc( 100vh - 162px);
+}
+.file-view{
+  z-index: 20;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+}
+.ui-resizable-e{
+cursor: e-resize;
+z-index: 100 !important;
+background: gray;
+width: 100px !important;
+
+}
+.tree-folder{
+  resize: horizontal;
+  z-index: 50;
+  display: flex;
+  width: 30%;
+  min-width: 50px;
+  height: 100%;
+  position: relative;
+  margin-right: 20px;
+}
+
+.divider{
+  right: 0 ;
+  position: absolute;
+  width: 1px;
+  background: rgb(180, 180, 180);
+  height: 100%;
+  cursor: e-resize;
+}
+.tree-root{
+  width: 100%;
+  overflow-x: auto;
+  height: 100%;
+  margin: 0;
+  padding-top: 30px;
+}
+
 .tree-root li {
   padding: 0 !important;
 }
 
 .tree-root ul,
 li {
+  margin: 0 !important;
+  white-space: nowrap;
   list-style: none;
 }
-
-.folder .child.close {
-  display: none;
+.tree-root ul{
+  margin: 0 !important;
 }
 
-.folder span {
+.folder.close .child {
+  display: none;
+}
+.folder .child {
+  display: block;
+}
+
+
+.folder.close span {
+  white-space: nowrap;
   cursor: pointer;
   font-weight: 600;
   color: var(--text-secondary);
@@ -474,7 +529,7 @@ li {
   padding: 5px 0;
 }
 
-.file span {
+.folder .file span {
   cursor: pointer;
   font-weight: 600;
   color: var(--text-secondary);
@@ -485,8 +540,15 @@ li {
 }
 
 
-.select {
-  color: black !important;
+.folder span{
+  white-space: nowrap;
+    cursor: pointer;
+  font-weight: 600;
+  color: black;
+  height: 32px;
+  display: inline-flex;
+  align-items: self-end;
+  padding: 5px 0;
 }
 
 .folder.close span::before {
@@ -502,11 +564,11 @@ li {
   text-align: center;
 }
 
-.arrow.close {
+.folder.close .arrow {
   content: url("../asset/right.png");
 }
 
-.arrow {
+.folder .arrow {
   content: url("../asset/down.png");
 }
 

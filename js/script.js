@@ -35,137 +35,106 @@ $(document).ready(function () {
 
   //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   //Folder tree
+
+  
   $(".folder").each(function () {
     var folder = $(this);
     if (folder.hasClass("close")) {
       folder.children("span").before('<i class="arrow close"></i>');
     } else {
       folder.children("span").before('<i class="arrow"></i>');
+      folder.children("span").addClass("select");
     }
   });
 
   $(".folder")
     .children("span")
     .click(function (e) {
-      // $(this)
-      //   .parent()
-      //   .siblings()
-      //   .addClass("close")
-      //   .children(".child")
-      //   .addClass("close")
-      //   .children('.folder')
-      //   .addClass('close')
-      // $(this).siblings('.child').find('.arrow').addClass('close')
-      // $(this)
-      //   .parent()
-      //   .siblings()
-      //   .addClass("close")
-      //   .children(".arrow")
-      //   .addClass("close");
-      // $(this).siblings(".arrow").toggleClass("close");
-      // $(this)
-      //   .parent()
-      //   .toggleClass("close")
-      //   .children(".child")
-      //   .toggleClass("close")
-      //   .children(".folder")
-      //   .addClass("close")
-      //   .children(".child")
-      //   .addClass("close");
-      // $(this).parents(".tree-root").find("span").removeClass("select");
-      $(this).toggleClass("select");
-      if ($(this).hasClass("select")) {
-        $(this).parent().removeClass("close");
-        $(this)
-          .siblings()
-          .removeClass("close")
-          .find(".child")
-          .children(".folder")
-          .addClass("close");
-        $(this).parent().siblings().find(".select").removeClass("select");
-        $(this)
-          .parent()
-          .siblings()
-          .children("span")
-          .siblings()
-          .addClass("close");
-      } else if (!$(this).hasClass("select")) {
-        $(this).siblings().addClass("close");
-        $(this).parent().siblings().find(".select").removeClass("select");
-        $(this).parent().addClass("close");
-        $(this)
-          .siblings(".child")
-          .find(".folder")
-          .addClass("close")
-          .children(".child")
-          .addClass("close")
-          .siblings(".arrow")
-          .addClass("close");
-        $(this).siblings(".child").find(".select").removeClass("select");
+      let folder = $(this).parent();
+      folder.toggleClass("close");
+      if (folder.hasClass("close")) {
+        folder.children().find(".folder").addClass("close");
+        if (folder.hasClass("first-child")) {
+          folder.siblings().removeClass("close");
+        } else {
+          folder
+            .parents(".first-child")
+            .siblings()
+            .addClass("close")
+            .children()
+            .find(".folder")
+            .addClass("close");
+          folder.siblings().addClass("close");
+        }
+      } else {
+        if (folder.hasClass("first-child")) {
+          folder
+            .siblings()
+            .addClass("close")
+            .children()
+            .find(".folder")
+            .addClass("close");
+        } else {
+          folder
+            .parents(".first-child")
+            .siblings()
+            .addClass("close")
+            .children()
+            .find(".folder")
+            .addClass("close");
+          folder.siblings().addClass("close");
+        }
       }
     });
 
   $(".folder")
     .children(".arrow")
     .click(function (e) {
-      //     $(this)
-      //       .parent()
-      //       .siblings()
-      //       .addClass("close")
-      //       .children(".child")
-      //       .addClass("close");
-      //       $(this)
-      //       .parent()
-      //       .siblings()
-      //       .addClass("close")
-      //       .children(".arrow")
-      //       .addClass("close");
-      //     $(this).toggleClass("close");
-      //     $(this)
-      //       .parent()
-      //       .toggleClass("close")
-      //       .children(".child")
-      //       .toggleClass("close")
-      //       .children(".folder")
-      //       .addClass("close")
-      //       .children(".child")
-      //       .addClass("close");
-      //     $(this).parents(".tree-root").find("span").removeClass("select");
-
-      //     $(this).siblings("span").toggleClass("select");
-      let span = $(this).siblings('span');
-      span.toggleClass("select");
-      if (span.hasClass("select")) {
-        span.parent().removeClass("close");
-        span
-          .siblings()
-          .removeClass("close")
-          .find(".child")
-          .children(".folder")
-          .addClass("close");
-        span.parent().siblings().find(".select").removeClass("select");
-        span
-          .parent()
-          .siblings()
-          .children("span")
-          .siblings()
-          .addClass("close");
-      } else if (!span.hasClass("select")) {
-        span.siblings().addClass("close");
-        span.parent().siblings().find(".select").removeClass("select");
-        span.parent().addClass("close");
-        span
-          .siblings(".child")
-          .find(".folder")
-          .addClass("close")
-          .children(".child")
-          .addClass("close")
-          .siblings(".arrow")
-          .addClass("close");
-        span.siblings(".child").find(".select").removeClass("select");
+      let folder = $(this).parent();
+      folder.toggleClass("close");
+      if (folder.hasClass("close")) {
+        folder.children().find(".folder").addClass("close");
+        if (folder.hasClass("first-child")) {
+          folder.siblings().removeClass("close");
+        } else {
+          folder
+            .parents(".first-child")
+            .siblings()
+            .addClass("close")
+            .children()
+            .find(".folder")
+            .addClass("close");
+          folder.siblings().addClass("close");
+        }
+      } else {
+        if (folder.hasClass("first-child")) {
+          folder
+            .siblings()
+            .addClass("close")
+            .children()
+            .find(".folder")
+            .addClass("close");
+        } else {
+          folder
+            .parents(".first-child")
+            .siblings()
+            .addClass("close")
+            .children()
+            .find(".folder")
+            .addClass("close");
+          folder.siblings().addClass("close");
+        }
       }
     });
+  // $('.tree-root').after(
+  //   `<div class="divider"></div>`
+  // )
 
+   $('.tree-folder').resizable()
+  //   // $('.file-view').resizable()
+
+ 
+ 
   //----------------------------------------------------------------------------------------------------------------------------------------------------------------
   // Tabs
   $("#tabs2").scrollTabs();
