@@ -75,8 +75,7 @@
 }
 
 .scroll_tabs_theme_light div.scroll_tab_inner span.scroll_tab_over {
-  color: var(--text-black);
-  background: var(--secondary-color);
+
   border-radius: 5px;
 }
 
